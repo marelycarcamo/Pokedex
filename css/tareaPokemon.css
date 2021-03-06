@@ -12,12 +12,11 @@
 	background-size: cover;
     -moz-background-size: cover;
     -webkit-background-size: cover;
-	/* background-position-y: top; */
+	background-position-y: top;
 }
 
 #contenedor>div{
-height: 600px;
-
+	height: 600px;
 }
 
 h1{
@@ -54,13 +53,11 @@ h1{
 	display:flex;
 	flex-direction: column;
 	justify-content: space-between;
-
 }
 
 #caja-texto{
 	margin-top: 35px;
 	margin-bottom: 10px;
-	
 }
 
 .cajas-flechas{
@@ -73,8 +70,6 @@ h1{
 	max-height: 450px;
 	
 }
-
-
 
 p{
 	font-size:x-large;
