@@ -3,8 +3,6 @@ async function capturaDatos(i){
     url= "https://pokeapi.co/api/v2/pokemon/"+i;
     let respuesta =await fetch(url);
     let datosPokemon =await respuesta.json();
-    console.log(datosPokemon[i]);
-    // $("#infoPokemon").text(datosPokemon);
     urlPokemon = (datosPokemon.sprites.other.dream_world.front_default);
     $("#img-pokemon").attr("src",urlPokemon);
      $("h1").text(`#${datosPokemon.id} ${datosPokemon.name}`);
@@ -13,16 +11,15 @@ async function capturaDatos(i){
 }; 
  
 function clickFlechaIzq(){
-    if (i==1){
-        i=650;
-    }   
+    i= i==1? 650:i;
+ 
+
 capturaDatos(--i);
 }
 
 function clickFlechaDer(){
-    if (i==649){
-        i=0;
-    }
+    i= i==649? 0:i;
+  
 
 capturaDatos(++i);
 }
